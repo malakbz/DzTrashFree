@@ -1,0 +1,348 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Dosis', sans-serif;
+} 
+.page{
+    width: 100%;
+    margin: auto;
+    background-image: url('/static/images/Groupe de masques 11.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
+    height: 620px;
+}
+.navbar{
+
+    display: flex;
+    flex-direction: inline-block;
+    justify-content: space-around;
+    align-items: center;
+    top: 20%;
+}
+ul{
+    margin-top: 10;
+    flex: 1;
+    text-align: right;
+    padding: 1% 0%;
+}
+ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 0 0px;
+    padding: 0 2;
+    justify-content: space-between;
+}
+ul li a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    padding: 0 1px;
+    position: relative;
+    font-size: 25px;
+    margin: auto 10px;
+}
+a{
+    color: #fff ;
+}
+a:link {
+    text-decoration: none;
+}
+ul li a:hover::after{
+width: 100%;
+}
+.banner{
+    display: flex;
+    margin-top: 0%;
+}
+.button1{
+    background-color: #4CAF50;
+    color: rgba(245, 245, 245,1);
+    border-radius: 27px;
+    padding: 10px 25px;
+    margin-left: 50px;
+    border: none;
+}
+.bt{
+  background-color: #4CAF50;
+  color: rgba(245, 245, 245,1);
+  border-radius: 27px;
+  padding: 5px 10px;
+  margin-left: 20px;
+  border: none;
+}
+.slash{
+    color: #4CAF50;
+}
+.clean{
+    color: #4CAF50;
+}
+.left-column{
+    margin: 200px,180px,90px,20px;
+    padding-top: 150px;
+    font-size: 40px;
+}
+label.logo{
+    color: black;
+    font-size: 30px;
+    line-height: 80px;
+    padding: 0 0px;
+    margin-left: 0%;
+    font-weight: bold;
+  }
+.p1{
+    margin-left: 50px;
+    font-size: 19px;
+    color: black;
+    padding-bottom: 10px;
+}
+.description {
+    color: black;
+    font-size: 20px;
+    margin: auto 5px;
+    margin-bottom: 10px;
+    padding: 0px 5px 0px 5px ;
+}
+.description2 {
+    color: black;
+    font-size: 20px;
+    margin: auto 5px;
+    padding: auto 5px 0px 5px ;
+}
+h3 {
+    position: relative;
+    color: black;
+    text-align: center;
+    font-weight: 600;
+    padding: 20px 20px;
+    margin-bottom: 5px;
+}
+  .page2{
+    width: 100%;
+    margin: auto;
+  }
+  .three-boxes{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+  }
+  .box{
+      display: flex;
+      flex-direction: column;
+      width: 320px;
+      padding: 20px;
+      border: none;
+      border-radius: 10%;
+      text-align: center;
+      margin: 0 0 20px; 
+      height: 400px;
+      ;}
+      #box1{
+        background-color: #e9e2d7;
+    display: flex;
+flex-direction: column; }
+      #box2{background-color:#d3e1b0  ;}
+      #box3{background-color: #e6e6e6;}
+      #box11{background-color:#e9e2d7 ;
+        display: flex;
+    flex-direction: column;
+height: 600px;}
+#box22{background-color: #d3e1b0;
+height: 600px;}
+#box33{background-color: #e6e6e6;
+height: 600px;}
+      .btn{
+          color: #fff;
+          padding: 12px 23px;
+          border: none;
+          border-radius: 27px;
+          margin:auto , 10px ;
+      }
+      #btn1{background-color: #9a9389;}
+      #btn2{background-color:  #4CAF50 ;}
+      #btn3{background-color: #797878;}
+      .titlearticle{
+          color: black;
+          font-size: 30px;
+          font-weight: bold;
+          text-transform: uppercase;
+          padding: 0;
+          margin: 70px 20px;
+          font-family: "TrashHand",cursive;
+          text-align: center;
+      }
+      h3::after{
+        content: " ";
+        left: 50%;
+        right: auto;
+        bottom: 0;
+        position: absolute;
+        width: 55px;
+        height: 5px;
+        border-radius: 5px;
+        box-sizing: inherit;
+        transform: translateX(-50%);
+    }
+    #titleb1::after{background-color: #9a9389;}
+    #titleb2::after{background-color: #4CAF50;}
+    #titleb3::after{background-color: #797878;}
+    .img2{
+        width: 700px;
+        height: 500px;
+        margin-left: 35px;
+        margin-bottom: 60px;
+    }
+    .page3{
+        display: flex;
+        flex-direction: row;
+        margin-top: 100px;
+    }
+    .text3{
+        flex-direction: column;
+        margin-left: 80px;
+        margin-top: 60px;
+    }
+    .btn4{
+        background-color: #4CAF50;
+        color: #fff;
+        border-radius: 27px;
+        padding: 10px 25px;
+        margin-left: 0px;
+        border: none;
+    }
+    #btn4{
+        font-size: 20px;
+        padding: 2px 10px;
+    }
+    .img4{
+        width: 300px;
+        height: 200px;
+        align-self: center;
+        border-radius: 10%;
+    }
+    .date{
+        margin-right: 180px;
+        margin-bottom: -40px;
+    }
+    .page4{color: black;}
+      .containers{
+        width: 85%;
+        background: #fff;
+        border-radius: 6px;
+        padding: 20px 60px 30px 40px;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        margin-left: 50px;
+        margin-bottom: 20px;
+      }
+      .contents .left-sides .details{
+        margin: 14px;
+        text-align: center;
+      }
+      .contents .left-sides .details i{
+        font-size: 40px;
+        color: #3e2093;
+        margin-bottom: 10px;
+        margin-top: 5px;
+      }
+      .contents .left-sides .details .topics{
+        font-size: 18px;
+        font-weight: 500;
+      }
+      .contents .left-sides .details .text-ones,
+      .contents .left-sides .details .text-twos{
+        font-size: 14px;
+        color: #afafb6;
+      }
+       .left-sides{
+          display: flex;
+          flex-direction: inline-block ;
+          justify-content: space-between;
+      }
+      .fa {
+        padding: 20px;
+        font-size: 20px;
+        width: 10px;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 50%;
+        margin: 14;
+        margin-bottom: 10px;
+      }
+      
+      .fa:hover {
+          opacity: 0.7;
+      }
+      
+      .fa-facebook {
+        background: #3B5998;
+        color: white;
+
+      }
+      .fa-instagram {
+        background: #125688;
+        color: white;
+      }
+      .instagram{
+          margin-bottom: 10px;
+      }
+      #date{
+          font-size: smaller;
+      }
+      .contents .right-sides .topic-texts{
+        font-size: 23px;
+        font-weight: 600;
+        color: #3e2093;
+      }
+      .right-sides .input-boxs{
+        height: 50px;
+        width: 100%;
+        margin: 12px 0;
+      }
+      .right-sides .input-boxs input,
+      .right-sides .input-boxs textarea{
+        height: 100%;
+        width: 100%;
+        border: none;
+        outline: none;
+        font-size: 16px;
+        background: #F0F1F8;
+        border-radius: 6px;
+        padding: 0 15px;
+        resize: none;
+      }
+      .right-sides .message-boxs{
+        min-height: 0px;
+      }
+      .right-sides .input-boxs textarea{
+        padding-top: 6px;
+      }
+      .right-sides .button{
+        display: inline-block;
+        margin-top: 0px;
+      }
+      .right-sides .button input[type="button"]{
+        color: #fff;
+        font-size: 18px;
+        outline: none;
+        border: none;
+        padding: 8px 16px;
+        border-radius: 6px;
+        background: #3e2093;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+      .button input[type="button"]:hover{
+        background: #5029bc;
+      }
+      hr{
+        margin-left: 15%;
+        margin: 5% auto;
+      }
+      h2{
+        margin-top: 20px;
+        margin-bottom: 10px;
+      }
+      img.logo{
+  margin-left: 50px;
+  margin-top: 0px;
+}

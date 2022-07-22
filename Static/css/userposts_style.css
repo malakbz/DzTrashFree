@@ -1,0 +1,172 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+  }
+  body{
+    font-family: 'Dosis', sans-serif;
+  }
+  nav{
+    background: #4CAF50;
+    height: 80px;
+    width: 100%;
+  }
+  h2{
+    margin-left: 30px;
+  }
+  label.logo{
+    color: white;
+    font-size: 30px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bold;
+  }
+  nav ul{
+    float: right;
+    margin-right: 20px;
+  }
+  nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+  }
+  nav ul li a{
+    color: white;
+    font-size: 15px;
+    padding: 7px 10px;
+    border-radius: 3px;
+    text-transform: uppercase;
+  }
+  a.active,a:hover{
+    background: #09440b;
+    transition: .5s;
+  }
+  .checkbtn{
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+  }
+  
+  section{
+    background-size: cover;
+    height: calc(100vh - 80px);
+  }
+  
+  .p .i{
+    flex: 1;
+      text-align: center;
+      color: #666;
+      font-size: 10px;
+  }
+  
+  .articles{
+    margin-top: 30px;
+    margin:  80px;
+  }
+  .articles .article{
+    display: flex;
+    flex-wrap:wrap;
+    margin-bottom: 30px;
+    margin-top: 25px;
+  }
+  .articles .article .left img{
+    height: 300px;
+    width: 500px;
+  }
+  .articles .article .right {
+    margin-left: 40px;
+    max-width: 50%;
+  }
+  .articles .article .right p.date{
+    color: #7f7e7e;
+  }
+  .articles .article .right p.description{
+    color: #2d2d2d;
+  }
+  .articles .article .right p.auteur{
+    color: #2d2d2d;
+    margin-top: 15px;
+    font-size: 17px;
+    font-weight: bold;
+  }
+  .button1 {
+    border-radius: 10px;
+    background-color: #4CAF50;
+    border: none;
+    margin-left: 70%;
+    margin-top: 60px;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 18px;
+    padding: 10px;
+    width: 180px;
+    height: auto;
+    transition: all 0.3s ease-out;
+    cursor: pointer;
+  }
+  .button1:hover {
+    color: white;
+  }
+  
+  select.searchwilaya{
+    margin-top: -30px;
+    margin-left: 100px;
+    height: 40px;
+    width: 250px;
+    float: left;
+    border: 1px solid grey;
+    background: #f1f1f1;
+    padding: 10px;
+  
+    
+  }
+  p.post{
+    margin-top: 100px ;
+    margin-left: 25%;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  form.search button {
+    float: left;
+    width: 20%;
+    height: 40px;
+    margin-top: -57px;
+    margin-left: 350px;
+    padding: 10px;
+    background: #4CAF50;
+    color: white;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none;
+    cursor: pointer;
+  }
+  
+  
+  
+  form.search button:hover {
+    background: #09440b;
+  }
+  
+  form.search::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  label.logo{
+    color: white;
+    font-size: 30px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bold;
+  }
+  img.logo{
+    margin-right: 20px;
+    margin-top: 5px;
+  }

@@ -1,0 +1,244 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Dosis', sans-serif;
+    
+}
+.navbar{
+    background: #4CAF50;
+    height: 80px;
+    width: 100%;
+}
+ul{
+    float: right;
+    margin-right: 20px;
+}
+ul li{
+    display: inline-block;
+  line-height: 80px;
+  margin: 0 5px;}
+ul li a {
+    color: white; 
+  font-size: 15px;
+  padding: 7px 10px;
+  border-radius: 3px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.delete{
+  width: 100%;
+  background: #1c5a1e ;
+  color: white;
+}
+
+.button{
+    color: white;
+    font-size: 15px;
+    padding: 7px 10px;
+    border-radius: 3px;
+    text-transform: uppercase;  
+}
+ul li a.active,ul li a:hover{
+    background: #09440b;
+    transition: .5s;
+  }
+  label.logo{
+    color: white;
+    font-size: 30px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bold;
+  }
+  .checkbtn{
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+  }
+  #check{
+    display: none;
+  }
+  @media (max-width: 952px){
+    label.logo{
+      font-size: 30px;
+      padding-left: 50px;
+    }
+     ul li a{
+      font-size: 16px;
+    }
+  }
+  @media (max-width: 858px){
+    .checkbtn{
+      display: block;
+    }
+    ul{
+      position: fixed;
+      width: 100%;
+      height: 100vh;
+      background: #2c3e50;
+      top: 80px;
+      left: -100%;
+      text-align: center;
+      transition: all .5s;
+    }
+     ul li{
+      display: block;
+      margin: 50px 0;
+      line-height: 30px;
+    }
+     ul li a{
+      font-size: 20px;
+    }
+    a:hover,a.active{
+      background: none;
+      color: #0082e6;
+    }
+    #check:checked ~ ul{
+      left: 0;
+    }
+  }
+  a.modifier{margin-left: 10px;}
+  a.modifier:link {
+    color: black;
+  }
+  
+  /* visited link */
+  a.modifier:visited {
+    color: black;
+  }
+  
+  /* mouse over link */
+  a.modifier:hover {
+    color: #4CAF50;
+  }
+  
+  /* selected link */
+  a.modifier:active {
+    color: black;
+  }
+/*.dscrp{
+    border-radius: 30px;
+    border: 1px solid rgb(203, 204, 204);
+    background-color: rgb(203, 204, 204);
+    padding: 5px 10px;
+    margin: 5px 80px;
+    margin-right: 850px;
+    margin-left: 50px;
+    text-align: left;
+    color: rgb(163, 164, 164);
+}
+h4{
+    margin: 5px 60px;
+    font-size: 20px;
+    text-align: left;
+}
+.info {
+    margin-top: 150px;
+}
+.button2{
+    background-color: #4CAF50;
+    color: #fff;
+    border-radius: 27px;
+    padding: 15px 10px;
+    margin: 0px 80px;
+    margin-left: 120px;
+    margin-right: 950px;
+    border: none;
+    text-align:  center;
+    font-size: 15px;
+}
+.description{ color: black;
+    font-size: 19px;
+    margin: 10px 5px;
+    padding: 5px 5px 50px 5px ;}*/
+    /*.pages{
+      display: flex;
+      flex-direction: inline-block;
+    }
+    {
+      display: flex;
+      flex-direction: column;
+    }
+    .article{
+      display: flex;
+      flex-direction: inline-block;
+    }
+    .img{
+      height:150px;
+      width:350px;
+    }*/
+    .pages{
+      display: flex;
+  
+      flex-direction: inline-block;
+    }
+    img{
+      height: 180px;
+      width: 300px;
+    }
+    .article{
+      flex: 50%;
+      display: flex;
+      flex-direction: inline;
+      border: 5px solid #4CAF50;
+      width: 700px;
+      height: 210px;
+      margin-bottom: 20px;
+      border-radius: 15px;
+      padding: 10px 5px;
+      
+    }
+    .page3{
+      margin-left: 30%;
+      margin-top: 20%;
+    }
+    .right{
+      margin-bottom: 100px;
+      height: 300px;
+      margin-left: 10px;
+    }
+    .p .i{
+      flex: 1;
+        text-align: center;
+        color: #666;
+        font-size: 10px;
+    }
+    .page2{margin-top: 20%;}
+    .info {
+      margin-top: 150px;
+      margin-left: 50px;
+  }
+  .dscrp{
+    border-radius: 30px;
+    border: 1px solid rgb(203, 204, 204);
+    background-color: rgb(203, 204, 204);
+    margin: 5px 0px;
+    text-align: left;
+    padding: 5px 200px 5px 10px;
+    color: rgb(163, 164, 164);
+}
+.myposts{
+  margin-left: 40%;
+}
+.articles{
+  margin-top: 5%;
+}
+/*.button2{
+  background-color: #4CAF50;
+  color: #fff;
+  border-radius: 27px;
+  padding: 15px 10px;
+  margin: 0px 80px;
+  margin-left: 120px;
+  margin-right: 950px;
+  border: none;
+  text-align:  center;
+  font-size: 15px;
+}*/
+h4{
+  margin-left: 10px;
+}

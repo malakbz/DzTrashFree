@@ -1,0 +1,205 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Events Page</title>
+    <link rel="stylesheet" href="{% static '/css/userevents_style.css' %}" />
+    <link rel="stylesheet" href="{% static '/css/organisationposts_formevent.css' %}" />
+    <link rel="stylesheet" href="{% static '/css/userevents_postuser.css' %}" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"
+    />
+    <link href="/your-path-to-fontawesome/css/all.css" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <nav>    
+      <label class="logo"><img class="logo" src="{%static '/images/planet-earth (1).png' %}" alt="" />DZ Trash Free</i></label>
+      <ul>
+        <div class="list1">
+          <li><a href="{%url 'user-home'%}">Home</a></li>
+          <li><a href="{%url 'user-profile'%}">My Profile</a></li>
+          <li><a href="#article">Articles</a></li>
+        <li><a href="{%url 'user-posts'%}">Posts</a></button></li>
+        <li><a href="{%url 'user-events'%}">Events</a></li>
+        <li><a href="file:///D:/Projet%20pluridicsiplinaire/projet2CPI/pageaccueiluser/index.html#page4">Contact Us</a></button></li>
+        <li><a href="{%url 'logout'%}">Log Out</a></button></li>
+        </div>
+    
+    </ul>
+    </nav>
+    <p class="event">Search for an event in :</p>
+    <form method =GET class="searchevent" action="" style="margin:auto;max-width:300px">
+      <div class="input-field">
+        <select class="searchwilaya" name="search-event" >
+          <option value="" disabled selected hidden>Wilaya</option> 
+         <option value="1">1-Adrar</option>
+         <option value="2">2-Chlef</option>
+         <option value="3">3-Laghouat</option>
+         <option value="4">4-Oum El Bouaghi</option>
+         <option value="5">5-Batna</option>
+         <option value="6">6-Béjaïa</option>
+         <option value="7">7-Biskra</option>
+         <option value="8">8-Béchar</option>
+         <option value="9">9-Blida</option>
+         <option value="10">10-Bouira</option>
+         <option value="11">11-Tamanrasset</option>
+         <option value="12">12-Tébessa</option>
+         <option value="13">13-Tlemcen</option>
+         <option value="14">14-Tiaret</option>
+         <option value="15">15-Tizi Ouzou</option>
+         <option value="16">16-Alger</option>
+         <option value="17">17-Djelfa</option>
+         <option value="18">18-Jijel</option>
+         <option value="19">19-Sétif</option>
+         <option value="20">20-Saïda</option>
+         <option value="21">21-Skikda</option>
+         <option value="22">22-Sidi Bel Abbès</option>
+         <option value="23">23-Annaba</option>
+         <option value="24">24-Guelma</option>
+         <option value="25">25-Constantine</option>
+         <option value="26">26-Médéa</option>
+         <option value="27">27-Mostaganem</option>
+         <option value="28">28-M'Sila</option>
+         <option value="29">29-Mascara</option>
+         <option value="30">30-Ouargla</option>
+         <option value="31">31-Oran</option>
+         <option value="32">32-El Bayadh</option>
+         <option value="33">33-Illizi</option>
+         <option value="34">34-Bordj Bou Arreridj</option>
+         <option value="35">35-Boumerdès</option>
+         <option value="36">36-El Tarf</option>
+         <option value="37">37-Tindouf</option>
+         <option value="38">38-Tissemilt</option>
+         <option value="39">39-El Oued</option>
+         <option value="40">40-Khenchela</option>
+         <option value="41">41-Souk Ahras</option>
+         <option value="42">42-Tipaza</option>
+         <option value="43">43-Mila</option>
+         <option value="44">44-Aïn Defla</option>
+         <option value="45">45-Naâma</option>
+         <option value="46">46-Aïn Témouchent</option>
+         <option value="47">47-Ghardaïa</option>
+         <option value="48">48-Relizane</option>
+         <option value="49">49-Timimoun</option>
+         <option value="50">
+           50-Bordj Badji Mokhtar
+         </option>
+         <option value="51">51-Ouled Djellal</option>
+         <option value="52">52-Béni Abbès</option>
+         <option value="53">53-In Salah</option>
+         <option value="54">54-In Guezzam</option>
+         <option value="55">55-Touggourt</option>
+         <option value="56">56-Djanet</option>
+         <option value="57">57-M'Ghair</option>
+         <option value="58">58-El Meniaa</option>
+       </select>
+      </div>
+      <button type="submit" name="wilayabutton"><i class="fa fa-search"></i></button>
+    </form>
+    <p class="for"> For :</p>
+    <form method='GET' class="searchdate">
+      <input class="date" type="date" name="search-date"
+    value="2022-04-26"
+    min="2022-01-01" max="2022-12-31">
+      <button name="datebutton" type="submit"><i class="fa fa-search"></i></button>
+    </form>
+    {%if search_date%}
+    
+    <section class="articles">
+      {%for searched_date in searched_dates%}
+      <div class="article">
+        <div class="left">
+          <img src="{{searched_date.image.url}}" alt="" />
+        </div>
+        <div class="right">
+          <p class="date">{{searched_date.created_at}}</p>
+          <h1>{{searched_date.title}}</h1>
+          <p class="description">
+            {{searched_date.description}}
+          </p>
+          <p class="auteur">
+            <i class="fas fa-map-marker"> {{searched_date.wilaya}} {{searched_date.location}}</i>
+          </p>
+          <p class="auteur">
+            <i class="fas fa-user"> {{searched_date.user.username}}</i>
+          </p>
+          <p class="auteur">
+            <i class="fas fa-user-friends"> {{searched_date.participated.all.count}} participants</i>
+          </p>
+      </div>
+      {%endfor%}
+    
+    {%elif search_event%}
+    
+    <section class="articles">
+      {%for searched_event in searched_events%}
+      <div class="article">
+        <div class="left">
+          <img src="{{searched_event.image.url}}" alt="" />
+        </div>
+        <div class="right">
+          <p class="date">{{searched_event.created_at}}</p>
+          <h1>{{searched_event.title}}</h1>
+          <p class="description">
+            {{searched_event.description}}
+          </p>
+          <p class="auteur">
+            <i class="fas fa-map-marker"> {{searched_event.location}},{{searched_event.wilaya}}</i>
+          </p>
+          <p class="auteur">
+            <i class="fas fa-user"> {{searched_event.user.username}}</i>
+          </p>
+      </div>
+      {%endfor%}
+       {%else %}
+    <section class="articles">
+      
+      {% for event in events%}
+      <div class="article">
+        <div class="left">
+          <img src="{{event.image.url}}" alt="" />
+        </div>
+        <div class="right">
+          <p class="date">{{event.created_at}}</p>
+          
+          <h1>{{event.title}}</h1>
+          <p class="description">
+            {{event.description}}
+          </p>
+          <p class="auteur">
+            <i class="fas fa-map-marker"> {{event.location}},{{event.wilaya}}</i>
+          </p>
+         
+          <p class="auteur">
+            <i class="fas fa-user"> {{event.user.username}}</i>
+          </p>
+        
+          <p class="auteur">
+            <i class="fas fa-user-friends"> {{event.participated.all.count}} participants </i>
+          </p>
+          </p>
+          <form method="POST" class="ui form">
+            {%csrf_token%}
+            <input type='hidden' name='event_id' value="{{ event.id}}"/>
+            {%if user not in event.participated.all%}
+              <button class="ui button positive" type="submit">Participate</button>
+            {%else%}
+              <button class="ui button negative" type="submit">Unparticipate</button>
+            {%endif%}
+          </form>
+      </div>
+      {%endfor%}
+      {%endif%}
+     
+    </section>
+  </body>
+</html>

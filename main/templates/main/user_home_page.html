@@ -1,0 +1,169 @@
+{% load static %}
+ {%load widget_tweaks %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>DZ trash free</title>
+    <link rel="stylesheet" href="{% static '/css/user_style.css' %}"/>
+    <link rel="stylesheet" href="{% static '/css/postuser2.css' %}" />
+    <link href="https://fonts.googleapis.com/css?family=Dosis&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="page">
+        <div class="navbar">
+            <img class="logo" src="{%static '/images/planet-earth (1).png' %}" alt="" /><label class="logo">DZ Trash Free</label> 
+            <ul>
+              <div class="list1">
+                <li><a href="{%url 'home'%}">Home</a></li>
+                <li><a href="{%url 'user-profile'%}">My Profile</a></li>
+                <li><a href="#article">Articles</a></li>
+                <li><a class="button" href="#divOne">Post</a></li>
+              <div class="overlay" id="divOne">
+                <div class="wrapper">
+                  <h2>Please Fill up The Form</h2>
+                  <a class="close" href="#">&times;</a>
+                  <div class="content">
+                    <div class="container">
+                      <form method ="POST"  action = "" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        {% for message in messages %}
+                        <p>{{ message }}</p>
+                        {% endfor %}
+                        <label></label>
+                        {% render_field form.title  placeholder="Title" %}
+                        <label></label>
+                        {% render_field form.wilaya  placeholder="wilaya" %} 
+                        <label></label>
+                        {% render_field form.location class="input" placeholder="Full Adresse" class='input' %}
+                        <label></label>
+                        {% render_field form.description  placeholder="Description"  %} 
+                        <!-- <label class="label">Image</label> -->
+                        <label></label>
+                        {% render_field form.image  placeholder="Choose a file"  %} 
+                        <input type="submit" value="Submit"  name="postTrash">
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <li><a href="{%url 'user-posts'%}">Posts</a></button></li>
+              <li><a href="{%url 'user-events'%}">Events</a></li>
+              <li><a href="file:///D:/Projet%20pluridicsiplinaire/projet2CPI/pageaccueiluser/index.html#page4">Contact Us</a></button></li>
+              <li>
+                <button class="bt">
+                  <a href="{%url 'logout'%}"><b>Log Out</b></a>
+                </button>
+              </li>>
+              </div>
+          
+          </ul>
+    </div>
+            <div class="left-column"><pre>      <span class='clean' style="font-size: 80px;">{{user.username}},Welcome</span><br>       To Our Community </pre>
+        </div>
+    </div>
+        <div class="page2">
+        <h2 class="titlearticle">Articles</h2>
+        <div class="three-boxes">
+            
+            <div id="box1" class="box" >
+                <h3 id="titleb1">Recycling basics </h3>
+                <div class="description2"><p>The last period in Algeria the term "recycling" got out from being a term that is
+                    used just by Ecologists to a word that most people heard of it at least once, but
+                    what does it mean? <br>and most importantly How to do it?</p></div>
+                <button id="btn1" class="btn"><a href="#"><span id="btn4"><b>Discover More</b></span></a></button>
+            </div>
+            
+            <div id="box2" class="box">
+                <h3 id="titleb2">bla bla </h3>
+                <div class="description2"><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae culpa hic, quod voluptas eligendi, minus et enim dolore sint nihil, facilis sunt consequatur voluptatibus corporis! Adipisci similique laboriosam iusto omnis.</p></div>
+                <button id="btn2" class="btn"><a href="#"><span id="btn4"><b>Discover More</b></span></a></button>
+            </div>
+            
+            <div id="box3" class="box">
+                <h3 id="titleb3">bla bla </h3>
+                <div class="description2"><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae culpa hic, quod voluptas eligendi, minus et enim dolore sint nihil, facilis sunt consequatur voluptatibus corporis! Adipisci similique laboriosam iusto omnis.</p></div>
+                <button id="btn3" class="btn"><a href="#"><span id="btn4"><b>Discover More</b></span></a></button>
+            </div>
+        </div>
+    </div>
+    <div class="page3" id="page3">s
+        <img class="img2" src="{%static '/images/2.png' %}">
+        <div class="text3">
+            <h1>OUR PLANS</h1>
+            <br><br>
+            <h2>Report a  trash</h2>
+            <p>Be the change by reporting the trash that you face <br>in your day and you want to clean.</p>
+            <br>
+            <h2>Participate in events</h2>
+            <p>Participate in the events of collecting the trash and saving the planet.</p>
+        </div>
+    </div>
+<div class="page4" id="page4">
+    <div class="containers">
+        <div class="contents">
+          <div class="left-sides">
+              <div class="facebook details">
+                  <a href="#" class="fa fa-facebook"></a>
+                  <div class="topics">Our Facebook</div>
+                  <div class="text-ones">Leave us a comment</div>
+                </div>
+                <div class="intagram details">
+                    <a href="#" class="fa fa-instagram"></a>
+                    <div class="topics">Our Instagram</div>
+                    <div class="text-ones">Leave us a comment</div>
+                </div>
+                <div class="address details">
+                  <i class="fas fa-map-marker-alt"></i>
+                  <div class="topics">Address</div>
+                  <div class="text-ones">Surkhet, NP12</div>
+                  <div class="text-twos">Birendranagar 06</div>
+                </div>
+            <div class="phone details">
+              <i class="fas fa-phone-alt"></i>
+              <div class="topics">Phone</div>
+              <div class="text-ones">+0098 9893 5647</div>
+              <div class="text-twos">+0096 3434 5678</div>
+            </div>
+            <div class="email details">
+              <i class="fas fa-envelope"></i>
+              <div class="topics">Email</div>
+              <div class="text-ones">codinglab@gmail.com</div>
+              <div class="text-twos">info.codinglab@gmail.com</div>
+            </div>
+          </div>
+          <hr size="2" width="70%" color="#afafb6">  
+          <div class="right-sides">
+            <div class="topic-texts">Send us a message</div><br>
+            <p>If you have any feeedback for us let us know , we'll be happy to recieve your message</p>
+
+            <form action="" method="POST" enctype="multipart/form-data">
+              {% csrf_token %}
+              <div class="input-boxs">
+                <!-- <input   name="message-name" value="{{c_form.message_name}}" placeholder="Enter your name"> -->
+                {% render_field c_form.message_name placeholder="Enter your name" %}
+              </div>
+              <div class="input-boxs">
+                <!-- <input  name="message-email"  value ="{{c_form.message_email}}" placeholder="Enter your email"> -->
+                {% render_field c_form.message_email placeholder="Enter your email" %}
+              </div>
+            <div class="input-boxs message-boxs" style="padding-bottom: 10%;">
+                <!-- <input  name="message" value="{{c_form.message}}" style="padding-bottom: 10%; padding-top: 2%;" placeholder="Enter your Message"> -->
+                {% render_field c_form.message placeholder="Enter your message" %}
+              </div>
+              <div class="button">
+                <input type="submit" value="Send Now" name="contact" >
+            </div>
+          </form>
+        </div>
+        </div>
+      </div>
+    </div>
+
+</body>
+</html
+
+

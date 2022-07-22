@@ -1,0 +1,189 @@
+{% load static%}{%load widget_tweaks %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Zen+Tokyo+Zoo&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="{% static '/css/user_postuser.css' %}" />
+   <link rel="stylesheet" href="{% static '/css/user_userprof.css' %}"/>
+   <link rel="stylesheet" href="{% static '/css/user_photoprofuser.css' %}"/>
+</head>
+<body>
+        <div class="navbar"> 
+      <img class="logo" 
+      style="height: 70px; width: 70px;" src="{%static '/images/planet-earth (1).png' %}" alt="" /><label class="logo" >DZ Trash Free</label>
+        <ul>
+            <div class="list1">
+              <li><a href="{%url 'user-home'%}">Home</a></li>
+              <li><a href="{%url 'user-profile'%}">My Profile</a></li>
+              <li><a href="#article">Articles</a></li>
+              <li><a href="{%url 'user-home'%}">Post</a></li>
+            <li><a href="{%url 'user-posts'%}">Posts</a></button></li>
+            <li><a href="{%url 'user-events'%}">Events</a></li>
+            <li><a href="file:///D:/Projet%20pluridicsiplinaire/projet2CPI/pageaccueiluser/index.html#page4">Contact Us</a></button></li>
+            <li><a href="{%url 'logout'%}">Log Out</a></button></li>
+            </div>
+        
+        </ul>
+        </div>
+<div class="pages">
+        <div class="page2">
+                <h3>My Account</h3>
+                <div class="profile-pic-div">
+                        <img src="{{user.profile.image.url}}" id="photo">
+                    </div>
+
+                    <div class="info">
+                        <div class="info_data">
+                             <div class="data">
+                                <h4>Name</h4>
+                                <p class="dscrp">{{user.username}}</p>
+                             </div>
+                        
+                             <div class="data">
+                               <h4>Email</h4>
+                                <p class="dscrp">{{user.email}}</p>
+                             </div> 
+                             <div class="data">
+                              <h4>Wilaya</h4>
+                               <p class="dscrp">{{user.wilaya}}</p>
+                            </div> 
+                            <p><a href="#modify2"  class="modifier">Change Password</a></p> <br>
+                             <div class="overlay" id="modify2">
+                              <div class="wrapper">
+                                <h2>Please Fill up The Form</h2>
+                                <a class="close" href="#">&times;</a>
+                                <div class="content">
+                                  <div class="container">
+                                    <form method="POST"  enctype="multipart/form-data">
+                                      {%csrf_token%}
+                                      {% for message in messages %}
+                                      <p>{{message}}</p>
+                                    {% endfor %}
+                                      <label></label>
+                                      <div class="input-field">
+                                        <i class="fas fa-envelope"></i>
+                                        {% render_field w_form.new_password1 placeholder="New password" %}
+                                       </div>
+                                      <label></label>
+                                      <div class="input-field">
+                                        <i class="fas fa-envelope"></i>
+                                        {% render_field w_form.new_password2  placeholder="Renter your New password" %}
+                                      </div>
+                                      <label></label>
+                                      <label for="psword">Please Enter Your Password:</label>
+                                      <div class="input-field">
+                                        <i class="fas fa-envelope"></i>
+                                        {% render_field w_form.old_password placeholder="Password" %}
+                                        </div>
+                                      
+                                      <input type="submit" value="Submit" name="changepassword" />
+                                    </form>
+                                  </div>
+                                </div>
+                              </div>
+                            </div> 
+                              <p><a href="#modify3"  class="modifier">Update My Profile</a></p> <br>
+                              <div class="overlay" id="modify3">
+                                <div class="wrapper">
+                                  <h2>Please Fill up The Form</h2>
+                                  <a class="close" href="#">&times;</a>
+                                  <div class="content">
+                                    <div class="container">
+                                      <form method="POST"  enctype="multipart/form-data">
+                                        
+                                        {%csrf_token%}
+                                        {% for message in messages %}
+                                        <p>{{message}}</p>
+                                      {% endfor %}
+                                          <label></label>
+                                          <div class="input-field">
+                                            <i class="fas fa-user"></i>
+                                            {{u_form.username}}
+                                          </div>
+                                          <label></label>
+                                          <div class="input-field">
+                                            <i class="fas fa-user"></i>
+                                            {{u_form.email}}
+                                          </div>
+                                          <label></label> 
+                                          <div class="input-field">
+                                            <i class="fas fa-user"></i>
+                                            {{u_form.wilaya}}
+                                          </div>  
+                                          
+                                        <label></label>
+                                        <div class="input-field">
+                                          <i class="fas fa-user"></i>
+                                          {{p_form.image}}
+                                        </div>
+                                        <label></label>
+                                        <input type="submit" value="Submit" name="updateprofile">
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                        </div>
+                        </div>
+                    </div>
+        <div class="page3">
+          <h3 class="myposts">My Posts</h3>
+            <section class="articles">
+              {%for post in posts%}
+              
+                <div class="article">
+                  <div class="left">
+                    <img src="{{post.image.url}}" alt="" />
+                  </div>
+                  <div class="right">
+                    <p class="date">{{post.created_at}}</p>
+                    <h1>{{post.title}}</h1>
+                    <p class="description">
+                    {{post.description}}
+                    </p>
+                    <p class="auteur">
+                      <i class="fas fa-map-marker"> {{post.location}},{{post.wilaya}}</i>
+                    </p>
+                    <p class="auteur">
+                      <i class="fas fa-user"> {{post.user.username}}</i>
+                    </p>
+                    <button  class="delete" name="delete" type="submit"  value="Delete" >Delete</button>
+                  </div>
+                </div>
+                <div>
+                  {% if user == post.user%}
+                    <form method="POST" >
+                      {% csrf_token%}
+                      
+                      
+                      <input type='hidden' name='post_id' value="{{ post.id}}"/>
+                    </form>
+                  {%endif%}
+                </div> 
+               
+                {%endfor%}
+         
+              </section>
+        </div>
+</div>
+                <script src="{% static '/js/appuser.js' %}"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
