@@ -137,12 +137,7 @@ AUTH_USER_MODEL = 'main.User'
 MEDIA_ROOT =os.path.join(BASE_DIR,'media')
 MEDIA_URL = '/media/'
 
-# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-# EMAIL_HOST='smtp.gmail.com'
-# EMAIL_PORT='587'
-# EMAIL_HOST_USER='dztrashfree@gamil.com'
-# EMAIL_HOST_PASSWORD='picjazhmanpmgjgc'
-# EMAIL_USE_TLS=True
+
 
 
 
