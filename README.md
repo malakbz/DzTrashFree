@@ -1,7 +1,7 @@
 
 # Dz Trash Free
 
-Dz Trash Free is a secod year project @esi-sba , it is a web application that makes it easy for organisations and people to connect for the one and the only goal to make the Algerian Environement clean
+Dz Trash Free is a secod year project @esi-sba , it is a web application that makes it easy for organisations and people to connect for the one and the only goal to make the Algerian Environement clean, Django was used for the backend , html, css , js for the frontend
 
 
 ## Features
